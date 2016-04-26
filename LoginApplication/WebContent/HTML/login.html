@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body background="Image/sky.jpg">
+	<div align="center">
+		<form action="login" method="get">
+			<h1 style="color: #191970;" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login
+				Page</h1>
+			<div align="right">
+				Dont't have an account? <a href="login" style="color: purple;">Sign
+					Up <ins>
+						<strong>here</strong>
+					</ins>
+				</a>
+			</div>
+		</form>
+		<form action="login" method="post">
+			<input type="hidden" name="pageid" value="login" />
+			<table>
+				<tr>
+					<td>UserName:</td>
+					<td><input type="text" name="userName" maxlength="8" /></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="password" maxlength="10" /></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td></td>
+					<td><input type="reset" value="Reset" style="width: 174px;" /></td>
+				</tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Login" style="width: 174px;" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
