@@ -16,7 +16,7 @@ public class Constants {
 	public static final String ATTRIBUTE_EXCEPTION = "exceptions";
 	public static final String MESSAGE_TRY_AGAIN = "Please try again.";
 	public static final String PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#!$%^&+=]).{8}$";
-	public static final String SUCCESS = "/HTML/success.html";
+	public static final String SUCCESS = "/HTML/profile.jsp";
 	public static final String FAILURE = "/HTML/error.html";
 	public static final String LOGIN = "/HTML/login.html";
 }

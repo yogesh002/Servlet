@@ -1,0 +1,69 @@
+.about_font {
+	font-family: 'Slabo 29px', serif;
+}
+
+.section {
+	text-align: justify;
+	background-color: rgb(249, 249, 249);
+	margin: auto;
+	padding: 0px;
+}
+
+.article_header {
+	text-align: center;
+}
+
+.dropdown_list {
+	background-color: rgb(8, 8, 8);
+}
+
+.profile_image {
+	padding: 15px;
+}
+
+.pager {
+	margin: 5px;
+}
+
+.navbar-nav {
+	float: right;
+}
+
+.body {
+	background-color: rgb(226, 226, 226);
+}
+
+.email_header {
+	padding-top: 25px;
+}
+
+.telephone_header {
+	padding-top: 25px;
+}
+
+.social_media {
+	padding-bottom: 5px;
+}
+
+.mail_me {
+	padding-bottom: 10px;
+}
+
+.footer {
+	background-color: #DCEDC8;
+	margin-bottom: 10px;
+	color: #000000;
+	padding: 10px;
+}
+
+.copyright_msg_container {
+	background-color: black;
+	padding: 5px;
+}
+
+.copyright_msg {
+	color: white;
+	font-size: 10px;
+	text-align: center;
+	margin: 0px;
+}
