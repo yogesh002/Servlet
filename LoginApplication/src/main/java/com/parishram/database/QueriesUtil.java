@@ -193,7 +193,8 @@ public class QueriesUtil extends HttpServlet {
 				validateUserNamePasswordForLoginFlow(userNames, model, usernamePassword, request, response, out);
 			} else if (userNames.contains(request.getParameter(Constants.ATTRIBUTE_USERNAME)) && !pageId.isEmpty()
 					&& pageId != null && pageId.equalsIgnoreCase(Constants.ATTRIBUTE_SIGNUP)) {
-				throw new InvalidInputException("Please signUp with another username because that user already exists. ");
+				throw new InvalidInputException(
+						"Please signUp with another username because that user already exists. ");
 			} else {
 				signUpSuccess(request, response, connection, out);
 			}
@@ -224,19 +225,19 @@ public class QueriesUtil extends HttpServlet {
 
 	private void validateUserWithPassWordEntered(LoginAppModel model, String passwordFromMap,
 			HttpServletRequest request, HttpServletResponse response, PrintWriter out)
-					throws InvalidInputException, ServletException, IOException {
+			throws InvalidInputException, ServletException, IOException {
 		String userName = "";
 		if (!model.getPassword().equalsIgnoreCase(passwordFromMap)) {
 			throw new InvalidInputException("The password does not match to that in the server. ");
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher(Constants.SUCCESS);
-			rd.include(request, response);
 			if (request.getSession(false) != null) {
 				if (model != null) {
 					userName = model.getUserName();
+					request.getSession(false).setAttribute(Constants.ATTRIBUTE_USERNAME, userName);
+					RequestDispatcher rd = request.getRequestDispatcher(Constants.SUCCESS);
+					rd.include(request, response);
 				}
 			}
-			out.print("Welcome Mr. " + userName);
 		}
 
 	}
