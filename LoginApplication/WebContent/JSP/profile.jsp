@@ -51,9 +51,10 @@
 			<li class="next"><a href="#">Next</a></li>
 		</ul>
 	</div>
-	</article> <article class="about_font col-md-4"> <header
+	</article> <article class="article_content col-md-4"> <header
 		class="article_header">
 	<h3>About</h3>
+	</header>
 	Lorem Ipsum has been the industry's standard dummy text ever since the
 	1500s, when an unknown printer took a galley of type and scrambled it
 	to make a type specimen book. It has survived not only five centuries,
@@ -64,7 +65,7 @@
 	specimen book. It has survived not only five centuries, but also the
 	leap into electronic typesetting, remaining essentially unchanged. It
 	wasthe including versions of Lorem Ipsum. <a href="#" class="continue"><i>Read
-			more...</i></a></article> <article class="about_font col-md-4"> <header
+			more...</i></a></article> <article class="article_content col-md-4"> <header
 		class="article_header">
 	<h3>About</h3>
 	</header> Lorem Ipsum has been the industry's standard dummy text ever since the
