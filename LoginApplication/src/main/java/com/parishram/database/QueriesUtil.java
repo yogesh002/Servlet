@@ -59,7 +59,9 @@ public class QueriesUtil extends HttpServlet {
 			try {
 				closeConnection(connection, out);
 			} catch (Exception e) {
-				out.write(e.getMessage());
+				out.write(
+						"<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>"
+								+ e.getMessage() + "</p>");
 				logger.debug("The exception caught while closing the resources: " + e.getMessage());
 			}
 		}
@@ -74,14 +76,18 @@ public class QueriesUtil extends HttpServlet {
 			rd = paramServletRequest.getRequestDispatcher(Constants.LOGIN);
 			if (rd != null) {
 				rd.include(paramServletRequest, paramServletResponse);
-				out.write(e.getMessage() + Constants.MESSAGE_TRY_AGAIN);
+				out.write(
+						"<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>"
+								+ e.getMessage() + Constants.MESSAGE_TRY_AGAIN + "</p>");
 			}
 
 		} else {
 			rd = paramServletRequest.getRequestDispatcher(Constants.FAILURE);
 			if (rd != null) {
 				rd.include(paramServletRequest, paramServletResponse);
-				out.write(e.getMessage());
+				out.write(
+						"<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>"
+								+ e.getMessage() + "</p>");
 			}
 		}
 	}

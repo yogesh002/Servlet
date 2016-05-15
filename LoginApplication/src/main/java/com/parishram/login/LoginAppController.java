@@ -76,15 +76,18 @@ public class LoginAppController extends HttpServlet {
 			if (isSignUpException(req)) {
 				rd = req.getRequestDispatcher("/HTML/signup.html");
 				rd.include(req, resp);
-				out.write(e.getMessage());
+				out.write(
+						"<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>"
+								+ e.getMessage() + "</p>");
 			} else {
 				rd = req.getRequestDispatcher(Constants.LOGIN);
 				rd.include(req, resp);
-				out.write(e.getMessage());
+				out.write(
+						"<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>"
+								+ e.getMessage() + "</p>");
 			}
 		}
 	}
-	
 
 	private boolean isSignUpException(HttpServletRequest req) {
 		Exception signUpException = (Exception) req.getAttribute("exceptions");
