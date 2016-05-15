@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login Page</title>
-</head>
-<body background="Image/sky.jpg">
-	<div align="center">
-		<form action="login" method="get">
-			<h1 style="color: #191970;" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login
-				Page</h1>
-			<div align="right">
-				Dont't have an account? <a href="login" style="color: purple;">Sign
-					Up <ins>
-						<strong>here</strong>
-					</ins>
-				</a>
-			</div>
-		</form>
-		<form action="login" method="post">
-			<input type="hidden" name="pageid" value="login" />
-			<table>
-				<tr>
-					<td>UserName:</td>
-					<td><input type="text" name="userName" maxlength="8" /></td>
-				</tr>
-				<tr>
-					<td>Password:</td>
-					<td><input type="password" name="password" maxlength="10" /></td>
-				</tr>
-				<tr></tr>
-				<tr>
-					<td></td>
-					<td><input type="reset" value="Reset" style="width: 174px;" /></td>
-				</tr>
-				<tr></tr>
-				<tr></tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="Login" style="width: 174px;" /></td>
-				</tr>
-			</table>
-		</form>
-	</div>
-
-</body>
-</html>
+	<head>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./CSS/login.css">
+		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A login page that lets user to sign in to the application. Also, lets user to sign up.">
+		<meta name="author" content="Yogesh Ghimire">
+		<meta charset="utf-8">
+		<title>Login Page</title>
+	</head>
+	<body class="container main_content">
+		<section>
+			<header class="login_title">
+				<h1>PARISHRAM</h1>
+				<h4>Sign In</h4>
+			</header>
+			<article class="table_content">
+				<form action="login" method="post">
+					<input type="hidden" name="pageid" value="login" />
+					<table class="login_table">
+						<tr>
+							<td>
+								<label for="email">UserName:</label>
+							</td>
+							<td><input type="text" name="userName" id= "email" placeholder="Enter Email" class="login_textfield"/></td>
+						</tr>
+						<tr>
+							<td>
+								<label for="password">Password:</label>
+							</td>
+							<td><input type="password" id="password" name="password" maxlength="10" placeholder="Enter Password" class="login_textfield"/></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit" value="Login" class="btn btn-primary btn-block"/></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<form action="login" method="get">
+									<p>Don't have an account?
+										<a href="login" class="signup_link">Sign Up <span>here</span></a>
+									</p>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</article>
+		</section>
+	</body>
+</html>								

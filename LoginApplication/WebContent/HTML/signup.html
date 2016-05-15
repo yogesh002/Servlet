@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>SIGN UP</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Yogesh Ghimire">
+	<meta name="description" content="A signup page to allow first time user create an account.">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../CSS/signup.css">
+	<title>Parishram -- SIGN UP --</title>
 </head>
-<body background="../Image/sky.jpg">
-	<h1 style="color: purple;" align="center">
-		<ins>SIGN UP PAGE</ins>
-	</h1>
-	<form action="../login" method="post">
-		<input type="hidden" name="pageid" value="signup" />
-		<div align="center">
-			<table>
+<body class="signup_body">
+<header class="title">
+		<h1>SIGN UP PAGE</h1>
+</header>
+<section class="signup_section">
+	<article>
+		<form action="../login" method="post">
+			<input type="hidden" name="pageid" value="signup" />
+			<table class="signup_table">
 				<tr>
-					<td>User Name:</td>
-					<td><input name="userName" /></td>
+					<td  class="signup_row_un">
+						<label for="username" class="signup_label">User Name:</label>
+					</td>
+					<td  class="signup_row_un">
+						<input type="text" name="userName" placeholder="Enter Username" id= "username"/>
+					</td>
 				</tr>
 				<tr>
-					<td>Password:</td>
-					<td><input type="password" name="password" /></td>
+					<td class="signup_row_pass">
+						<label for="password" class="signup_label">Password:</label>
+					</td>
+					<td  class="signup_row_pass" >
+						<input type="password" name="password" id="password" placeholder="Enter Password"/>
+					</td>
 				</tr>
 			</table>
-		</div>
-		<br>
-		<div align="center">
-			<input type="submit" value="SIGNUP" name="submit" />
-		</div>
-	</form>
+			<div class="submit">
+				<input type="submit" value="Sign Up" name="submit" class="btn btn-primary btn-block btn_submit"/>
+			</div>
+		</form>
+	</article>
+</section>
 </body>
 </html>

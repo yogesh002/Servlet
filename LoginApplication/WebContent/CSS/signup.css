@@ -1,0 +1,68 @@
+.title {
+	font-family: 'Merriweather', serif;
+	color: #311B92;
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
+.signup_body {
+	width: 500px;
+	max-width: 90%;
+	margin: auto;
+	background-color: rgb(250, 250, 250);
+}
+
+.signup_table {
+	padding: 15px;
+	width: 100%;
+}
+
+.signup_row_un {
+	padding: 30px 0px 10px 0px;
+}
+
+.signup_row_pass {
+	padding: 10px 0px 10px 0px;
+}
+
+.signup_label {
+	width: 120px;
+	max-width: 90%;
+	color: #311B92;
+	font-family: 'Merriweather', serif;
+	text-align: left;
+	font-size: 18px;
+}
+
+input#username {
+	width: 100%;
+	height: 40px;
+	border-radius: 5px;
+	font-family: sans-serif, serif;
+	background-color: rgb(250, 255, 189);
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+input#password {
+	width: 100%;
+	height: 40px;
+	border-radius: 5px;
+	font-family: sans-serif, serif;
+	background-color: rgb(250, 255, 189);
+	font-size: 20px;
+}
+
+.submit {
+	padding-top: 10px;
+}
+
+.btn_submit {
+	height: 40px;
+	text-align: center;
+}
+
+.signup_section {
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}

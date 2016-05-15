@@ -1,0 +1,45 @@
+.login_table {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	width: 100%;
+}
+
+.main_content {
+	background-color: rgb(220, 237, 200);
+}
+
+input[type|="text"], input[type|="password"] {
+	background-color: rgb(250, 255, 189);
+}
+
+.table_content {
+	width: 500px;
+	max-width: 90%;
+	margin: auto;
+}
+
+.login_title {
+	font-family: 'Merriweather', serif;
+	color: #311B92;
+}
+
+.login_textfield {
+	width: 100%;
+	border-radius: 5px;
+}
+
+table td {
+	padding: 10px;
+}
+
+.login_title {
+	text-align: center;
+}
+
+.signup_link:HOVER {
+	background-color: yellow;
+}
+
+.signup_link:LINK {
+	font-weight: bold;
+}
