@@ -41,18 +41,17 @@ public class QueriesUtil extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest paramServletRequest, HttpServletResponse paramServletResponse)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PrintWriter out = paramServletResponse.getWriter();
+		PrintWriter out = response.getWriter();
 		Connection connection = null;
 		try {
-			if (DBConnection.isConnectionSuccessful()) {
-				// TODO: make dynamic table contents
-				connection = DBConnection.getConnection();
-				checkUserNameForLoginAndSignup(paramServletRequest, connection, paramServletResponse, out);
-			}
+			// TODO: make dynamic table contents
+			DBConnection dbConnection = new DBConnection();
+			connection = dbConnection.getDatabaseConnection();
+			checkUserNameForLoginAndSignup(request, connection, response, out);
 		} catch (Exception e) {
-			handleException(e, paramServletRequest, paramServletResponse, out);
+			handleException(e, request, response, out);
 		}
 
 		finally {
