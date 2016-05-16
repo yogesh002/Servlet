@@ -1,4 +1,4 @@
-package com.parishram.login;
+package com.parishram.controller;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 
 import com.parishram.common.AvoidBrowserCache;
 
-public class LogOut extends HttpServlet {
+public class LogOutController extends HttpServlet {
 
 	/**
 	 * The user logs out. The {@code session} is invalidated and cache browser
@@ -21,7 +21,7 @@ public class LogOut extends HttpServlet {
 	 * Then user is redirected back to login screen
 	 */
 	private static final long serialVersionUID = 1L;
-	private static Logger logger = Logger.getLogger(LogOut.class);
+	private static Logger logger = Logger.getLogger(LogOutController.class);
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

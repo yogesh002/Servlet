@@ -1,4 +1,4 @@
-package com.parishram.login;
+package com.parishram.model;
 
 /**
  * This is a simple POJO class that holds the request parameters from the

@@ -1,4 +1,4 @@
-package com.parishram.login;
+package com.parishram.controller;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.parishram.common.Constants;
-import com.parishram.common.InvalidInputException;
+import com.parishram.exception.InvalidInputException;
+import com.parishram.model.LoginAppModel;
 
 /**
  * The main purpose of this class is to validate the username and password.
@@ -15,7 +16,7 @@ import com.parishram.common.InvalidInputException;
  * @author Yogesh
  *
  */
-public class LoginAppDelegate {
+public class ValidateController {
 
 	/**
 	 * This method checks if the username or the password is blank. If they are
@@ -76,8 +77,7 @@ public class LoginAppDelegate {
 			throw new InvalidInputException("Password should be 8 characters long.");
 		}
 		if (!isPatternMatch(password)) {
-			throw new InvalidInputException(
-					"Password should contain a combination of one uppercase letter, lowercase letter, a number, and a special character");
+			throw new InvalidInputException("Password should contain a combination of one uppercase letter, lowercase letter, a number, and a special character");
 		} else {
 			model.setPassword(password);
 		}

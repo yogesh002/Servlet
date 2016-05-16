@@ -9,23 +9,23 @@
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>login</servlet-name>
-		<servlet-class>com.parishram.login.LoginAppController</servlet-class>
+		<servlet-class>com.parishram.controller.LoginController</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>com.parishram.controller.LogOutController</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet>
 		<servlet-name>signup</servlet-name>
-		<servlet-class>com.parishram.database.QueriesUtil</servlet-class>
+		<servlet-class>com.parishram.controller.SignUpController</servlet-class>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>signup</servlet-name>
 		<url-pattern>/signup</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>logout</servlet-name>
-		<servlet-class>com.parishram.login.LogOut</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
 	<servlet-mapping>
 		<servlet-name>logout</servlet-name>
 		<url-pattern>/logout</url-pattern>

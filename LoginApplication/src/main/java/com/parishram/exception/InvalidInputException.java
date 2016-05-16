@@ -1,4 +1,4 @@
-package com.parishram.common;
+package com.parishram.exception;
 
 /**
  * Custom exception that is thrown in case the login input parameters from the

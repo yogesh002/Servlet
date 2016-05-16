@@ -19,4 +19,11 @@ public class Constants {
 	public static final String SUCCESS = "/JSP/profile.jsp";
 	public static final String FAILURE = "/HTML/error.html";
 	public static final String LOGIN = "/HTML/login.html";
+	public static final String SIGNUP = "/HTML/signup.html";
+
+	
+	//
+	public static final String USERNAME = "USERNAME";
+	public static final String PASSWORD = "PASSWORD";
+
 }

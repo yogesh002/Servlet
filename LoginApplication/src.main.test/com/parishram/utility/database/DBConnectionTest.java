@@ -1,4 +1,4 @@
-package com.parishram.database;
+package com.parishram.utility.database;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -9,6 +9,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.parishram.utility.database.DBConnection;
 
 /**
  * This class tests {@link DBConnection} which establishes a database
