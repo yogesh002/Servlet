@@ -3,7 +3,9 @@
 	<head>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="./CSS/login.css">
+		<link rel="stylesheet" href="./CSS/signup.css">
 		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="./Javascript/signup.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="A login page that lets user to sign in to the application. Also, lets user to sign up.">
 		<meta name="author" content="Yogesh Ghimire">
@@ -37,16 +39,54 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<form action="signup" method="get">
+								<!-- <form action="signup" method="get"> -->
 									<p>Don't have an account?
-										<a href="signup" class="signup_link">Sign Up <span>here</span></a>
+										<a href="#" class="signup_link" onclick="openModalWindow()">Sign Up <span>here</span></a>
 									</p>
-								</form>
+								<!-- </form> -->
 							</td>
 						</tr>
 					</table>
 				</form>
 			</article>
 		</section>
-	</body>
+<div class="modal_window" id="modal_window">
+<div class="signup_body">
+<div class="modal_content">
+<span class="exit" onclick="closeModalWindow()">X</span>
+<header class="title">
+		<h1>SIGN UP PAGE</h1>
+</header>
+<section class="signup_section">
+	<article>
+		<form action="signup" method="post">
+			<table class="signup_table">
+				<tr>
+					<td  class="signup_row_un">
+						<label for="username" class="signup_label">User Name:</label>
+					</td>
+					<td  class="signup_row_un">
+						<input type="text" name="userName" placeholder="Enter Username" id= "username"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="signup_row_pass">
+						<label for="password" class="signup_label">Password:</label>
+					</td>
+					<td  class="signup_row_pass" >
+						<input type="password" name="password" id="password" placeholder="Enter Password"/>
+					</td>
+				</tr>
+			</table>
+			<div class="submit">
+				<input type="submit" value="Sign Up" name="submit" class="btn btn-primary btn-block btn_submit"/>
+			</div>
+			<p id="error_message"></p>
+		</form>
+	</article>
+</section>
+</div>
+</div>
+</div>
+</body>
 </html>								

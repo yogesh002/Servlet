@@ -12,5 +12,6 @@ public enum Queries {
 	public String getValue() {
 		return query;
 	}
+	
 
 }

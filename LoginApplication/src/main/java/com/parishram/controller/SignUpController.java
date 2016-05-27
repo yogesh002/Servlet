@@ -44,7 +44,7 @@ public class SignUpController extends HttpServlet {
 			}
 
 		} catch (InvalidInputException e) {
-			rd = req.getRequestDispatcher(Constants.SIGNUP);
+			rd = req.getRequestDispatcher(Constants.LOGIN);
 			rd.include(req, resp);
 			out.write("<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>" + e.getMessage() + "</p>");
 		}
