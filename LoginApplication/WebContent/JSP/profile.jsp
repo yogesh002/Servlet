@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE>
 <html>
 <head>
@@ -47,18 +48,12 @@
 	</div>
 	</nav>
 	<section class="row section container">
-		 <article class="col-md-4 profile_image">
-		 	 <figure>
-		 	 	<img width = "220px" alt="ABOUT_PIC" src="./Image/profile.jpg" id="profile_image" class="img-responsive img-squared"> 
+		 <div class="col-md-6 avatar_parent">
+		 	 <figure class="avatar">
+		 	 	<img alt="ABOUT_PIC" src="./Image/profile.jpg" id="profile_image"> 
 		 	 </figure>
-		<div>
-			<ul class="pager">
-				<li class="previous" onclick="onClickPrevious()"><a href="#">Previous</a></li>
-				<li class="next" onclick="onClickNext()"><a href="#">Next</a></li>
-			</ul>
-		</div>
-		</article> 
-		<article class="article_content col-md-4">
+		</div> 
+		<article class="article_content col-md-3">
 			 <header class="article_header">
 				<h3>About</h3>
 			</header> 
@@ -71,12 +66,21 @@
 	unknown printer took a galley of type and scrambled it to make a type
 	specimen book. It has survived not only five centuries, but also the
 	leap into electronic typesetting, remaining essentially unchanged. It
+	wasthe including versions of Lorem Ipsum.<span id="read_more_one" onclick="display_hidden_content(this.id)">Read more...</span>
+	<p class="hidden_content_one">
+	Lorem Ipsum has been the industry's standard dummy text ever since the
+	1500s, when an unknown printer took a galley of type and scrambled it
+	to make a type specimen book. It has survived not only five centuries,
+	but also the leap into electronic typesetting, remaining essentially
+	unchanged. It wasthe including versions of Lorem Ipsum.Lorem Ipsum has
+	been the industry's standard dummy text ever since the 1500s, when an
+	unknown printer took a galley of type and scrambled it to make a type
+	specimen book. It has survived not only five centuries, but also the
+	leap into electronic typesetting, remaining essentially unchanged. It
 	wasthe including versions of Lorem Ipsum.
-		<a href="#" class="continue">
-			<i>Read more...</i>
-		</a>
+	</p>
 	</article> 
-	<article class="article_content col-md-4">
+	<article class="article_content col-md-3">
 		 <header class="article_header">
 			<h3>About</h3>
 		</header> 
@@ -89,12 +93,27 @@
 	unknown printer took a galley of type and scrambled it to make a type
 	specimen book. It has survived not only five centuries, but also the
 	leap into electronic typesetting, remaining essentially unchanged. It
+	wasthe including versions of Lorem Ipsum.<span id="read_more_two" onclick="display_hidden_content(this.id)">Read more...</span>
+	<p class="hidden_content_two">
+	Lorem Ipsum has been the industry's standard dummy text ever since the
+	1500s, when an unknown printer took a galley of type and scrambled it
+	to make a type specimen book. It has survived not only five centuries,
+	but also the leap into electronic typesetting, remaining essentially
+	unchanged. It wasthe including versions of Lorem Ipsum.Lorem Ipsum has
+	been the industry's standard dummy text ever since the 1500s, when an
+	unknown printer took a galley of type and scrambled it to make a type
+	specimen book. It has survived not only five centuries, but also the
+	leap into electronic typesetting, remaining essentially unchanged. It
 	wasthe including versions of Lorem Ipsum.
-		 <a href="#" class="continue">
-			 <i>Read more...</i>
-		 </a> 
+	</p>
 	</article> 
 	</section>
+	 <div>
+			<ul class="pager">
+				<li class="previous" onclick="onClickPrevious()"><a href="#">Previous</a></li>
+				<li class="next" onclick="onClickNext()"><a href="#">Next</a></li>
+			</ul>
+		</div>
 	<footer class="container footer">
 		<div class="row">
 		<div class="col-md-4">

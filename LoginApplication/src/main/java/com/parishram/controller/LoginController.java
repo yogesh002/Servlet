@@ -6,10 +6,15 @@ import java.sql.SQLException;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import com.parishram.common.Constants;
 import com.parishram.dao.LoginDao;
@@ -17,7 +22,14 @@ import com.parishram.exception.InvalidInputException;
 import com.parishram.model.LoginAppModel;
 
 public class LoginController extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+	private static Logger LOGGER = Logger.getLogger(LoginController.class);
+
+	private WebApplicationContext getWebApplicationContext() throws ServletException {
+		ServletContext context = getServletContext();
+		return WebApplicationContextUtils.getWebApplicationContext(context);
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -36,13 +48,15 @@ public class LoginController extends HttpServlet {
 			loginDelegate.handleInput(req);
 			LoginAppModel loginAppModel = (LoginAppModel) req.getSession(false).getAttribute(Constants.SESSION_LOGIN_MODEL);
 			LoginDao loginDao = new LoginDao(loginAppModel.getUserName(), loginAppModel.getPassword());
-			Map<String, String> userCredentialsInDb = loginDao.provideLoginStatus();
+			//
+			Map<String, String> userCredentialsInDb = loginDao.provideLoginStatus(getWebApplicationContext());
 			if (isUserCredentialsExistInDb(loginAppModel, req, userCredentialsInDb)) {
 				rd = req.getRequestDispatcher(Constants.SUCCESS);
 				req.getSession(false).setAttribute(Constants.USERNAME, loginAppModel.getUserName());
 				rd.include(req, resp);
 			}
 		} catch (InvalidInputException e) {
+			LOGGER.error("Invalid input caught. The exception is: " + e.getMessage(), e);
 			rd = req.getRequestDispatcher(Constants.LOGIN);
 			rd.include(req, resp);
 			out.write("<p style='color:black; font-weight: bold; text-align:center; padding: 10px; background-color: pink; width: 500px; margin: auto;'>" + e.getMessage() + "</p>");

@@ -15,7 +15,7 @@ import com.parishram.dao.SignupDao;
 import com.parishram.exception.InvalidInputException;
 import com.parishram.model.LoginAppModel;
 
-public class SignUpController extends HttpServlet {
+public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override

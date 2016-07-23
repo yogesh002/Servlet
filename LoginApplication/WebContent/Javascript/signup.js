@@ -33,3 +33,13 @@ function onClickPrevious() {
 	    + imageArray[index];
     document.getElementById("profile_image").src = url;
 }
+
+function display_hidden_content(event){
+	if(event === "read_more_one"){
+		 document.getElementsByClassName('hidden_content_one')[0].style.display = "inline-block";	
+	}
+	else if(event === "read_more_two"){
+		 document.getElementsByClassName('hidden_content_two')[0].style.display = "inline-block";	
+	}
+	document.getElementById(event).style.display = "none";
+}
