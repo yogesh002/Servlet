@@ -48,38 +48,41 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>1.4.1</version>
-				<executions>
-					<execution>
-						<id>enforce</id>
-						<configuration>
-							<rules>
-								<dependencyConvergence />
-							</rules>
-						</configuration>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<webXml>WebContent\WEB-INF\web.xml</webXml>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
+		  <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-dependency-plugin</artifactId>
+         <version>2.3</version>
+         <executions>
+             <execution>
+                 <phase>package</phase>
+                 <goals><goal>copy</goal></goals>
+                 <configuration>
+                     <artifactItems>
+                         <artifactItem>
+                             <groupId>com.github.jsimone</groupId>
+                             <artifactId>webapp-runner</artifactId>
+                             <version>8.5.5.0</version>
+                             <destFileName>webapp-runner.jar</destFileName>
+                         </artifactItem>
+                     </artifactItems>
+                 </configuration>
+             </execution>
+         </executions>
+     </plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.1</version>
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
+		</plugin>
 		</plugins>
 	</build>
 </project>

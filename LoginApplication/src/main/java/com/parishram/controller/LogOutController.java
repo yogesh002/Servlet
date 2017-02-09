@@ -30,7 +30,7 @@ public class LogOutController extends HttpServlet {
 		if (session != null) {
 			browserCache = new AvoidBrowserCache();
 			browserCache.avoidCacheFromBrowser(resp);
-			resp.sendRedirect("/LoginApplication");
+			resp.sendRedirect("/-LoginApplication");
 			session.invalidate();
 			logger.debug("Session invalidated");
 		}

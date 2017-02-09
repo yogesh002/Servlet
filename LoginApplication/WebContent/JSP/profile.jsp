@@ -82,7 +82,7 @@
 	</article> 
 	<article class="article_content col-md-3">
 		 <header class="article_header">
-			<h3>About</h3>
+			<h3>Biography</h3>
 		</header> 
 		<p>Lorem Ipsum has been the industry's standard dummy text ever since the
 	1500s, when an unknown printer took a galley of type and scrambled it
