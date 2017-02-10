@@ -3,6 +3,7 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
+<h1>Basic Servlet Example</h1>
 	<section>
 	 	<header>OVERVIEW</header>
 			<p>The user has to go to the login page:</p>
@@ -39,37 +40,6 @@
 			<header>
 				<h1>Login Application</h1>
 			</header>
-			Hello all, this is my personal project that I wrote for fun, and for
-			learning purpose. There might be hundred of mistakes, as I wrote for my sole purpose. It uses following tools and technologies:
-      <div>
-			<ul>
-				<li>JAVA</li>
-				<li>SERVLET</li>
-				<li>MySQL</li>
-				<li>MAVEN</li>
-				<li>JSP</li>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>BOOTSTRAP</li>
-				<li>JAVASCRIPT</li>
-			</ul>
-			</div>
-			<em>I am planning to add as many features as I can, so I am always improving it. Following are part of my future implementations:</em>
-			<div>
-			<ul>
-				<li>JAVASCRIPT</li>
-				<li>METEOR</li>
-				<li>MONGO DB</li>
-				<li>JUNIT</li>
-				<li>MOCKITO</li>
-			</ul>
-			<em>Besides the above mentioned technologies, I am also focused on :</em>
-			<ul>
-			  <li>Improving the code quality because the time I wrote these codes, I focused mainly on functionality.</li>
-			  <li>Improving the documentation</li>
-			  <li>Probably adding some automated build mechanism while making code changes</li>
-			</ul>
-			</div>
 		</article>
 		<article>
 	</section>
